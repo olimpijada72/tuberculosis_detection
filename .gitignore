@@ -1,0 +1,7 @@
+#mac system files
+.DS_store
+
+#images 
+*.png
+*.jpg
+*.jpeg
