@@ -3,18 +3,26 @@
     <head>
         <title>TB Detection</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <h1 class="text-center">TB Detection</h1>
+        <div class="grid-container">
 
-        <form class="p-3 text-center" action='/', method="post" enctype="multipart/form-data">
+        <h1 class="text-center grid-item">TB Detection</h1>
+        <p>My suggestion is to look up TB photos on some kaggle data sets 
+            I haven't used during training. 
+            For example <a href="https://www.kaggle.com/datasets/jtiptj/chest-xray-pneumoniacovid19tuberculosis">this data set</a>
+        </p>
+
+        <form class="p-3 text-center grid-item" action='/', method="post" enctype="multipart/form-data">
             <input class="form-control" type="file" name="imagefile" >
             <input class="btn btn-primary mt-3"type="submit" value="Predict Image" >
         </form>
 
         {% if prediction %}
-            <p class="text-center"> {{prediction}}</p>
+            <p class="text-center grid-item"> {{prediction}}</p>
         {% endif %}
+        </div>
     </body>
 </html>
